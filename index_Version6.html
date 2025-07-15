@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>أحمد علي الغروي </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Cairo:700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', sans-serif;
+      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+      color: #fff;
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+    .mawhiba-logo {
+      width: 120px;
+      margin: 40px auto 20px;
+      display: block;
+      filter: drop-shadow(0 0 12px #fff9);
+      background: none;
+      box-shadow: none;
+      border-radius: 0;
+      object-fit: contain;
+    }
+    .title {
+      text-align: center;
+      font-size: 2.8em;
+      margin-top: 10px;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px #fff, 0 0 30px #7f00ff;
+    }
+    .desc {
+      text-align: center;
+      font-size: 1.3em;
+      margin-bottom: 40px;
+      color: #e0e0e0;
+      font-weight: 400;
+      text-shadow: 0 0 8px #222;
+    }
+    .links {
+      text-align: center;
+      margin-top: 36px;
+      z-index: 2;
+      position: relative;
+    }
+    .links a {
+      display: inline-block;
+      margin: 0 18px 18px 0;
+      padding: 14px 30px;
+      background: linear-gradient(90deg, #7f00ff 0%, #e100ff 100%);
+      color: #fff;
+      border-radius: 32px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      box-shadow: 0 4px 24px #7f00ff33;
+      transition: transform 0.22s, box-shadow 0.22s;
+    }
+    .links a:hover {
+      transform: scale(1.09);
+      box-shadow: 0 8px 32px #e100ff44;
+      background: linear-gradient(90deg, #e100ff 0%, #7f00ff 100%);
+    }
+    .planets {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .planet {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.75;
+      box-shadow: 0 0 40px 10px #fff4;
+      animation: orbit 20s linear infinite alternate;
+    }
+    .planet1 { width: 90px; height: 90px; background: #ff8c00; top: 130px; left: 17vw; }
+    .planet2 { width: 110px; height: 110px; background: #00e5ff; top: 260px; right: 12vw; }
+    .planet3 { width: 65px; height: 65px; background: #7f00ff; bottom: 110px; left: 8vw; }
+    .planet4 { width: 135px; height: 135px; background: #ffd700; bottom: 90px; right: 6vw; }
+    @keyframes orbit {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(40px); }
+    }
+    .stars {
+      position: absolute;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .star {
+      position: absolute;
+      width: 2px; height: 2px;
+      background: #fff;
+      border-radius: 50%;
+      opacity: 0.8;
+      box-shadow: 0 0 8px #fff8;
+      animation: twinkle 2.5s infinite alternate;
+    }
+    @keyframes twinkle {
+      0% { opacity: 0.7; }
+      100% { opacity: 1; }
+    }
+    .footer {
+      position: fixed;
+      bottom: 18px;
+      width: 100%;
+      text-align: center;
+      color: #aaa;
+      font-size: 1em;
+      letter-spacing: 1.5px;
+      z-index: 9;
+      text-shadow: 0 0 7px #222;
+      font-family: 'Cairo', sans-serif;
+    }
+    @media (max-width: 600px) {
+      .title { font-size: 2em; }
+      .desc { font-size: 1em; }
+      .links a { font-size: 1em; padding: 10px 18px; }
+      .mawhiba-logo { width: 65px; }
+    }
+  </style>
+</head>
+<body>
+ 
+  <div class="title">أحمد علي الغروي</div>
+  <div class="desc">
+    مهتم بالتعلم والابداع مع فريق موهبة للبرمجة
+  </div>
+  <div class="links">
+    <a href="https://github.com/AHMED-GHARAWI" target="_blank">حسابي في GitHub</a>
+    <a href="https://github.com/AHMED-GHARAWI/-2">مشاريعي البرمجية</a>
+    <a href="https://htmlpreview.github.io/?https://github.com/AHMED-GHARAWI/-2/blob/main/%D9%88%D8%A7%D8%AC%D9%87%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%85.html" target="_blank">معاينة صفحة التعلم</a>
+  </div>
+  <div class="planets">
+    <div class="planet planet1"></div>
+    <div class="planet planet2"></div>
+    <div class="planet planet3"></div>
+    <div class="planet planet4"></div>
+  </div>
+  <div class="stars" id="stars"></div>
+  <div class="footer">احمد علي الغروي 2025</div>
+  <script>
+    // رسم النجوم بشكل عشوائي
+    const stars = document.getElementById('stars');
+    for(let i=0; i<120; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.top = Math.random()*100 + '%';
+      star.style.left = Math.random()*100 + '%';
+      stars.appendChild(star);
+    }
+  </script>
+</body>
+</html>
