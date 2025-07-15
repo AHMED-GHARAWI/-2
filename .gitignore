@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>صفحتي الجميلة</title>
   <style>
-    /* الكود الجمالي داخل الوسم style */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
@@ -62,7 +61,6 @@
   </style>
 </head>
 <body>
-
   <header>
     <h1>مرحباً بك في صفحتي</h1>
     <p>هذه صفحة تجريبية بتصميم أنيق باستخدام CSS</p>
@@ -79,6 +77,5 @@
   <footer>
     جميع الحقوق محفوظة © 2025
   </footer>
-
 </body>
 </html>
